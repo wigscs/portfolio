@@ -1,0 +1,59 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  @include mq('large') {
+    justify-content: flex-start;
+  }
+
+  &__details {
+    max-width: 380px;
+    padding: 30px;
+    flex: 1 1 auto;
+  }
+
+  &__form {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    &-input,
+    &-textarea {
+      flex-basis: 100%;
+      line-height: 2rem;
+      background-color: #ddd;
+      padding: 5px 15px;
+      border-radius: 5px;
+      border: none;
+      @include mq('large') {
+        &:nth-child(1),
+        &:nth-child(2) {
+          flex-basis: calc(50% - 5px);
+        }
+      }
+    }
+    &-textarea {
+      min-height: 175px;
+    }
+    &-submit {
+      background-color: #52ffb5;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.3rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-left: auto;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: darken(#52ffb5, 20%);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.main-footer {
+  width: 100%;
+  text-align: center;
+  background-color: #efffff;
+  border-top: $nav-border;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+}
+.to-top {
+  text-align: center;
+  p {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+  }
+  .up-arrow {
+    @extend %arrow, %up;
+    border-width: 0 3px 3px 0;
+    padding: 5px;
+  }
+}

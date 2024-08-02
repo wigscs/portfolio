@@ -1,0 +1,61 @@
+//==========================================//
+//                  MIXINS
+//==========================================//
+
+
+//==========================================//
+//              MEDIA QUERIES
+//==========================================//
+@mixin mq($breakpoint) {
+    @if $breakpoint == "x-small" {
+      @media (min-width: $break--xs) {
+        @content;
+      }
+    } @else if $breakpoint == "small" {
+      @media (min-width: #{$break--sml}) {
+        @content;
+      }
+    } @else if $breakpoint == "medium" {
+      @media (min-width: #{$break--med}) {
+        @content;
+      }
+    } @else if $breakpoint == "large" {
+      @media (min-width: #{$break--l}) {
+        @content;
+      }
+    } @else if $breakpoint == "x-large" {
+      @media (min-width: #{$break--xl}) {
+        @content;
+      }
+    } @else {
+      @error "#{$breakpoint} isn't a valid media query size!";
+    }
+  }
+
+@mixin mqm($breakpoint) {
+    @if $breakpoint == "x-small" {
+      @media (max-width: $break--xs) {
+        @content;
+      }
+    } @else if $breakpoint == "small" {
+      @media (max-width: #{$break--sml}) {
+        @content;
+      }
+    } @else if $breakpoint == "medium" {
+      @media (max-width: #{$break--med}) {
+        @content;
+      }
+    } @else if $breakpoint == "large" {
+      @media (max-width: #{$break--l}) {
+        @content;
+      }
+    } @else if $breakpoint == "x-large" {
+      @media (max-width: #{$break--xl}) {
+        @content;
+      }
+    } @else {
+      @error "#{$breakpoint} isn't a valid media query size!";
+    }
+  }
+
+

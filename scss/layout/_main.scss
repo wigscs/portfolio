@@ -1,0 +1,33 @@
+// .grid {
+//   display: grid;
+//   grid-template-columns: 25% 75%;
+//   grid-template-areas: 
+//     "nav  header"
+//     "main main";
+// }
+
+// nav {
+//   grid-area: nav;
+// }
+
+// header {
+//   grid-area: header;
+// }
+
+// main {
+//   grid-area: main;
+// }
+
+.fa-brands {
+  background-color: transparent;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  @include mq('large') {   
+    width: calc(100% - 200px);
+    margin-left: 200px;
+  }
+}

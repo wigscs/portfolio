@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam Wiggins | Portfolio</title>
+  
+  <script src="https://kit.fontawesome.com/ffb49e06ec.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <nav class="main-nav">
+    <div class="main-nav__avatar">
+      <h1>SW</h1>
+    </div>
+    <ul class="main-nav__items">
+      <li class="main-nav__item"><a href="#about">About Me</a></li>
+      <li class="main-nav__item"><a href="index.html#portfolio">My Portfolio</a></li>
+      <li class="main-nav__item"><a href="#examples">Code Examples</a></li>
+      <li class="main-nav__item"><a href="#scs-scheme">SCS Scheme</a></li>
+      <li class="main-nav__item"><a href="index.html#contact">Contact Me</a></li>
+    </ul>
+    <div class="main-nav__socials">
+      <a target="_blank" href="https://github.com/wigscs"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </nav>
+  <header class="hero-header">
+    <div class="container">
+      <h1 class="hero-header__title">Sam Wiggins</h1>
+      <h2 class="hero-header__subtitle">Web Developer</h2>
+      <div class="hero-header__scroll-down">
+        <a href="#portfolio">
+          <p>Scroll Down</p>
+          <i class="down-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <main id="portfolio">
+      <div class="project-list">
+
+        <div class="project-list__item">
+          <img class="project-image" src="img/portfolio/nmhp.jpg" alt="">
+          <h1 class="project-title">Netmatters Homepage</h1>
+          <span class="view-project-link"><a target="_blank" href="https://netmatters.samuel-wiggins.netmatters-scs.co.uk/">View Project</a></span>
+        </div>
+
+        <div class="project-list__item">
+          <img class="project-image" src="img/portfolio/portfolio.jpg" alt="">
+          <h1 class="project-title">Portfolio</h1>
+          <span class="view-project-link"><a target="_blank" href="index.html">View Project</a></span>
+        </div>
+
+        <div class="project-list__item">
+          <img class="project-image" src="img/portfolio/placeholder.jpg" alt="">
+          <h1 class="project-title">Placeholder</h1>
+          <span class="view-project-link"><a target="_blank" href="#">View Project</a></span>
+        </div>
+
+      </div>
+    </main>
+
+    <section id="contact" class="contact">
+        <div class="contact__details">
+          <h1>Get In Touch</h1>
+          <p>If you'd like to collaborate with me please use the contact form.</p>
+        </div>
+        <form class="contact__form" action="index.html" method="get">
+          <input class="contact__form-input" type="text" name="first_name" id="first_name" placeholder="First Name">
+          <input class="contact__form-input" type="text" name="last_name" id="last_name" placeholder="Last Name">
+          <input class="contact__form-input" type="email" name="email" id="email" placeholder="Email Address">
+          <input class="contact__form-input" type="text" name="subject" id="subject" placeholder="Subject">
+          <textarea class="contact__form-textarea" name="message" id="message" placeholder="Message"></textarea>
+          <button class="contact__form-submit" type="submit">Submit</button>
+        </form>
+    </section>
+    <div class="to-top">
+      <a href="#">
+        <i class="up-arrow"></i> 
+        <p>Back to Top</p>
+      </a>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <p>Sam Wiggins 2024</p>
+  </footer>
+</body>
+</html>

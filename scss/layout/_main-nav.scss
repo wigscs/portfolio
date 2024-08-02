@@ -1,0 +1,99 @@
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #efffff;
+  border-bottom: $nav-border;
+  z-index: 5;
+
+  &__avatar {
+    display: none;
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 10px;
+      font-weight: 800;
+      font-family: "Open Sans", sans-serif;
+      margin: auto;
+    }
+  }
+
+  &__items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    li {
+      margin: 10px 0;
+      line-height: 2rem;
+      a::before {
+        content: "";
+        @extend %arrow, %right;
+        border-color: #000;
+        position: relative;
+        right: 10px;
+        bottom: 1px;
+      }
+      &:first-child {
+        padding-top: 2rem;
+      }
+      &:last-child {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  &__item {
+    padding-left: 20px;
+  }
+
+  &__socials {
+    display: none;
+    font-size: 2rem;
+    text-align: center;
+    a:hover {
+      i {
+        color: #555;
+      }
+    }
+  }
+  
+  @include mq('large') {   
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: $nav-border;
+    border-bottom: none;
+    &__avatar {
+      display: flex;
+      height: 200px;
+      border-bottom: $nav-border;
+    }
+    &__items {
+      flex-direction: column;
+      li {
+        &:first-child {
+          padding-top: 2rem;
+        }
+        &:nth-last-child(2) { // second from last
+          padding-bottom: 2rem;
+        }
+        &:last-child {
+          border-top: $nav-border;
+          border-bottom: $nav-border;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+      }
+    }
+    &__socials {
+      display: initial;
+      border-bottom: $nav-border;
+      padding: 2rem 0;
+    }
+  }
+  
+}

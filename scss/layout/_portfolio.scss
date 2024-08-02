@@ -1,0 +1,29 @@
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 50px;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  &__item {
+
+  }
+  
+  .project-image {
+    width: 520px;
+    max-width: 100%;
+    border: 2px solid #000;
+  }
+
+  .view-project-link {
+    a::after {
+      content: "";
+      @extend %arrow, %right;
+      border-color: #000;
+      position: relative;
+      left: 5px;
+      bottom: 1px;
+    }
+  }
+}
