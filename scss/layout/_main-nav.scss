@@ -12,7 +12,10 @@
       letter-spacing: 10px;
       font-weight: 800;
       font-family: "Open Sans", sans-serif;
+    }
+    a {
       margin: auto;
+      text-decoration: none;
     }
   }
 
@@ -91,7 +94,6 @@
     }
     &__socials {
       display: initial;
-      border-bottom: $nav-border;
       padding: 2rem 0;
     }
   }

@@ -333,7 +333,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.to-top .up-arrow, .project-list .view-project-link a::after, .main-nav__items li a::before, .hero-header__scroll-down .down-arrow {
+.arrow, .to-top .up-arrow, .project-list .view-project-link a::after, .main-nav__items li a::before, .hero-header__scroll-down .down-arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -341,17 +341,22 @@ a:hover {
   background-color: transparent;
 }
 
-.project-list .view-project-link a::after, .main-nav__items li a::before {
+.right, .project-list .view-project-link a::after, .main-nav__items li a::before {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
 
-.to-top .up-arrow {
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up, .to-top .up-arrow {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
 
-.hero-header__scroll-down .down-arrow {
+.down, .hero-header__scroll-down .down-arrow {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
@@ -377,13 +382,13 @@ a:hover {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2470588235), #07051e), url(../img/dark-grunge.jpg);
   background-size: cover;
   background-color: rgba(42, 67, 73, 0.6196078431);
-  height: calc(100vh - 328px);
+  height: 100vh;
   margin-bottom: 4rem;
 }
 .hero-header .container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 328px);
+  height: 100vh;
 }
 .hero-header__title, .hero-header__subtitle {
   text-transform: uppercase;
@@ -433,6 +438,7 @@ a:hover {
     font-size: 4rem;
   }
   .hero-header__subtitle {
+    margin-top: 0;
     font-size: 2.5rem;
   }
 }
@@ -460,7 +466,10 @@ a:hover {
   letter-spacing: 10px;
   font-weight: 800;
   font-family: "Open Sans", sans-serif;
+}
+.main-nav__avatar a {
   margin: auto;
+  text-decoration: none;
 }
 .main-nav__items {
   padding: 0;
@@ -531,7 +540,6 @@ a:hover {
   }
   .main-nav__socials {
     display: initial;
-    border-bottom: 5px solid #a0a7d7;
     padding: 2rem 0;
   }
 }
@@ -624,6 +632,7 @@ a:hover {
 
 .to-top {
   text-align: center;
+  margin-top: 4rem;
 }
 .to-top p {
   margin: 0 0 10px;

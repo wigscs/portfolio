@@ -1,4 +1,4 @@
-%arrow {
+.arrow, %arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -6,22 +6,22 @@
   background-color: transparent;
 }
 
-%right {
+.right, %right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
 
-%left {
+.left, %left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
 
-%up {
+.up, %up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
 
-%down {
+.down, %down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
