@@ -460,7 +460,10 @@ a:hover {
   background-color: #efffff;
   border-bottom: 5px solid #a0a7d7;
   z-index: 5;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .main-nav__avatar {
   display: none;
@@ -544,6 +547,12 @@ a:hover {
   .main-nav__socials {
     display: initial;
     padding: 2rem 0;
+  }
+  .main-nav .menu-container--collapsed .main-nav__items {
+    height: auto;
+  }
+  .main-nav .menu-container--collapsed .menu-icon {
+    display: none;
   }
 }
 

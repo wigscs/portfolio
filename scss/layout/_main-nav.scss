@@ -5,7 +5,10 @@
   background-color: #efffff;
   border-bottom: $nav-border;
   z-index: 5;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
   &__avatar {
     display: none;
@@ -103,6 +106,14 @@
     &__socials {
       display: initial;
       padding: 2rem 0;
+    }
+    & .menu-container--collapsed {
+      .main-nav__items {
+        height: auto;
+      }
+      .menu-icon {
+        display: none;
+      }
     }
   }
   
