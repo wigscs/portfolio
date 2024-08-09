@@ -14,22 +14,28 @@
 
 </head>
 <body>
-
   <nav class="main-nav">
+
     <div class="main-nav__avatar">
       <a href="index.html"><h1>SW</h1></a>
     </div>
-    <ul class="main-nav__items">
-      <li class="main-nav__item"><a href="about.html#about">About Me</a></li>
-      <li class="main-nav__item"><a href="index.html#portfolio">My Portfolio</a></li>
-      <li class="main-nav__item"><a href="examples.html#examples">Code Examples</a></li>
-      <li class="main-nav__item"><a href="scs-scheme.html#scs-scheme">SCS Scheme</a></li>
-      <li class="main-nav__item"><a href="index.html#contact">Contact Me</a></li>
-    </ul>
+    <div class="menu-container menu-container--collapsed">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a href="about.html#about">About Me</a></li>
+        <li class="main-nav__item"><a href="index.html#portfolio">My Portfolio</a></li>
+        <li class="main-nav__item"><a href="examples.html#examples">Code Examples</a></li>
+        <li class="main-nav__item"><a href="scs-scheme.html#scs-scheme">SCS Scheme</a></li>
+        <li class="main-nav__item"><a href="index.html#contact">Contact Me</a></li>
+      </ul>
+      <i class="menu-icon menu-icon--open fa-solid fa-bars"></i>
+      <i class="menu-icon menu-icon--close fa-solid fa-x"></i>
+    </div>
     <div class="main-nav__socials">
       <a target="_blank" href="https://github.com/wigscs"><i class="fa-brands fa-github"></i></a>
     </div>
+
   </nav>
+
   <header class="hero-header">
     <div class="container">
       <h1 class="hero-header__title">Sam Wiggins</h1>
@@ -93,5 +99,7 @@
   <footer class="main-footer">
     <p>Sam Wiggins 2024</p>
   </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>

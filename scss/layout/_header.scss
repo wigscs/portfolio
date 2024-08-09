@@ -48,11 +48,15 @@
     .down-arrow {
       @extend %arrow, %down;
       border-color: #fff;
+      border-width: 0 3px 3px 0;
+      padding: 4px;
+      margin-top: 7px;
     }
     &:hover a p {
       text-decoration: underline;
     }
   }
+
   @include mq('small') {
     &__title {
       font-size: 3rem;

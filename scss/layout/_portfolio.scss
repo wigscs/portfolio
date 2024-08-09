@@ -1,19 +1,31 @@
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  // align-items: flex-end;
   gap: 50px;
-  justify-content: center;
   margin-bottom: 4rem;
-
+  justify-content: center;
+  
+  @include mq('medium') {
+    justify-content: flex-start;
+  }
   &__item {
-
+    max-width: 446.5px;
+    width: 100%;
+    @include mq('medium') {
+      
+      width: calc(50% - 25px);
+    }
   }
   
   .project-image {
-    width: 520px;
+    // width: 520px;
     max-width: 100%;
     border: 2px solid #000;
+  }
+
+  .project-title {
+    font-size: 1.7rem;
   }
 
   .view-project-link {
