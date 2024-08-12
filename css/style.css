@@ -630,6 +630,8 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 4rem;
+  /* This is our style for the invalid fields */
+  /* This is the style of our error messages */
 }
 @media (min-width: 992px) {
   .contact {
@@ -649,18 +651,21 @@ a:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
-.contact__form-input, .contact__form-textarea {
+.contact__form > div {
   flex-basis: 100%;
+}
+@media (min-width: 992px) {
+  .contact__form > div:nth-child(1), .contact__form > div:nth-child(2) {
+    flex-basis: calc(50% - 5px);
+  }
+}
+.contact__form-input, .contact__form-textarea {
+  width: 100%;
   line-height: 2rem;
   background-color: #ddd;
   padding: 5px 15px;
   border-radius: 5px;
   border: none;
-}
-@media (min-width: 992px) {
-  .contact__form-input:nth-child(1), .contact__form-input:nth-child(2), .contact__form-textarea:nth-child(1), .contact__form-textarea:nth-child(2) {
-    flex-basis: calc(50% - 5px);
-  }
 }
 .contact__form-textarea {
   min-height: 175px;
@@ -678,6 +683,34 @@ a:hover {
 .contact__form-submit:hover {
   cursor: pointer;
   background-color: #00eb86;
+}
+.contact .invalid input,
+.contact .invalid textarea {
+  border-color: #900;
+  background-color: #fdd;
+}
+.contact .invalid input:focus,
+.contact .invalid textarea:focus {
+  outline: none;
+}
+.contact .error {
+  display: none;
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+}
+.contact .invalid .error {
+  display: block;
+}
+.contact .invalid textarea + .error {
+  position: relative;
+  top: -4px;
+}
+.contact .error.active {
+  padding: 0.3em;
 }
 
 .main-footer {

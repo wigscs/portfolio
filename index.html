@@ -81,12 +81,33 @@
           <p>If you'd like to collaborate with me please use the contact form.</p>
         </div>
         <form class="contact__form" action="index.html" method="get">
-          <input class="contact__form-input" type="text" name="first_name" id="first_name" placeholder="First Name">
-          <input class="contact__form-input" type="text" name="last_name" id="last_name" placeholder="Last Name">
-          <input class="contact__form-input" type="email" name="email" id="email" placeholder="Email Address">
-          <input class="contact__form-input" type="text" name="subject" id="subject" placeholder="Subject">
-          <textarea class="contact__form-textarea" name="message" id="message" placeholder="Message"></textarea>
+          <div>
+            <input class="contact__form-input" type="text" name="first_name" id="first_name" placeholder="First Name" required>
+            <span class="error" aria-live="polite">Please enter your first name</span>
+          </div>
+        <div>
+          <input class="contact__form-input" type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+          <span class="error" aria-live="polite">Please enter your last name</span>
+        </div>
+        <div>
+          <input class="contact__form-input" type="email" name="email" id="email" placeholder="Email Address" required>
+          <span class="error" aria-live="polite">Please enter a valid email address</span>
+        </div>
+        <div>
+          <input class="contact__form-input" type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?#(\d{4}|\d{3}))?$">
+          <span class="error" aria-live="polite">Please enter a valid phone number</span>
+        </div>
+        <div>
+          <input class="contact__form-input" type="text" name="subject" id="subject" placeholder="Subject" required>
+          <span class="error" aria-live="polite">Please enter a subject</span>
+        </div>
+        <div>
+          <textarea class="contact__form-textarea" name="message" id="message" placeholder="Message" required></textarea>
+          <span class="error" aria-live="polite">Please enter a message</span>
+        </div>
+        <div>
           <button class="contact__form-submit" type="submit">Submit</button>
+        </div>
         </form>
     </section>
     <div class="to-top">

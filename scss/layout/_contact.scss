@@ -21,21 +21,25 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    
-    &-input,
-    &-textarea {
-      flex-basis: 100%;
-      line-height: 2rem;
-      background-color: #ddd;
-      padding: 5px 15px;
-      border-radius: 5px;
-      border: none;
+
+    > div {
+      flex-basis: 100%;    
       @include mq('large') {
         &:nth-child(1),
         &:nth-child(2) {
           flex-basis: calc(50% - 5px);
         }
       }
+    }
+    
+    &-input,
+    &-textarea {
+      width: 100%;
+      line-height: 2rem;
+      background-color: #ddd;
+      padding: 5px 15px;
+      border-radius: 5px;
+      border: none;
     }
     &-textarea {
       min-height: 175px;
@@ -55,5 +59,42 @@
         background-color: darken(#52ffb5, 20%);
       }
     }
+  }
+
+  /* This is our style for the invalid fields */
+  .invalid input, 
+  .invalid textarea {
+    border-color: #900;
+    background-color: #fdd;
+  }
+
+  .invalid input:focus,
+  .invalid textarea:focus {
+    outline: none;
+  }
+
+  /* This is the style of our error messages */
+  .error {
+    display: none;
+    width: 100%;
+    padding: 5px 15px;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .invalid .error {
+    display: block;
+  }
+
+  .invalid textarea + .error {
+    position: relative;
+    top: -4px;
+  }
+
+  .error.active {
+    padding: 0.3em;
   }
 }
