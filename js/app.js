@@ -43,3 +43,18 @@ if (contactForm) {
   contactForm.addEventListener('submit', submitHandler);
   contactForm.addEventListener('focusout', changeHandler);
 }
+
+// Typewriter effect
+let i = 0;
+const txt = 'Web Developer'; /* The text */
+const speed = 100; /* The speed/duration of the effect in milliseconds */
+document.querySelector(".hero-header__subtitle").innerHTML = '';
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.querySelector(".hero-header__subtitle").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+typeWriter();
