@@ -98,3 +98,13 @@
     padding: 0.3em;
   }
 }
+
+.success-message, .error-message {
+  padding: 5px 25px;
+}
+.success-message {
+  background-color: #52ffb5;
+}
+.error-message {
+  background-color: #ff6c52;
+}
