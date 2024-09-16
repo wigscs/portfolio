@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php 
+$page = 'scs-scheme';
+$title = "Sam Wiggins | SCS Scheme";
+?><!DOCTYPE html>
 <html lang="en">
 <head>
   <?php include 'views/head.php'; ?>

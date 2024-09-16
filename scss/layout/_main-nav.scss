@@ -53,11 +53,14 @@
         // padding-bottom: 2rem;
       }
 
-    }       
+    }
   }
 
   &__item {
     padding-left: 20px;
+    &.active {
+      text-decoration: underline;
+    }
   }
 
   &__socials {
@@ -116,9 +119,6 @@
       }
     }
   }
-  
-  
-
 }
 
 // slide out menu

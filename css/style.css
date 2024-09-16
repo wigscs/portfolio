@@ -504,6 +504,9 @@ a:hover {
 .main-nav__item {
   padding-left: 20px;
 }
+.main-nav__item.active {
+  text-decoration: underline;
+}
 .main-nav__socials {
   display: none;
   font-size: 2rem;

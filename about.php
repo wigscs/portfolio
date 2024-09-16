@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php 
+$page = 'about';
+$title = "Sam Wiggins | About";
+?><!DOCTYPE html>
 <html lang="en">
 <head>
   <?php include 'views/head.php'; ?>
