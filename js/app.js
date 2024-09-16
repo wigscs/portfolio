@@ -46,8 +46,8 @@ if (contactForm) {
 
 // Typewriter effect
 let i = 0;
-const txt = 'Web Developer'; /* The text */
-const speed = 100; /* The speed/duration of the effect in milliseconds */
+const txt = 'Web Developer';
+const speed = 100;
 document.querySelector(".hero-header__subtitle").innerHTML = '';
 
 function typeWriter() {
