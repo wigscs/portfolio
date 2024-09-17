@@ -3,7 +3,7 @@
         <h1 class="hero-header__title">Sam Wiggins</h1>
         <h2 class="hero-header__subtitle">Web Developer</h2>
         <div class="hero-header__scroll-down">
-            <a href="#about">
+            <a href="#<?php echo $page; ?>">
                 <p>Scroll Down</p>
                 <i class="down-arrow"></i>
             </a>

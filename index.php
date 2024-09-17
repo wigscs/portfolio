@@ -51,21 +51,21 @@ if (!empty($_POST)) {
             <div class="project-list">
 
                 <div class="project-list__item">
-                    <img class="project-image" src="img/portfolio/nmhp.jpg" alt="">
+                    <img class="project-image" src="img/portfolio/nmhp.jpg" alt="Netmatters Homepage">
                     <h1 class="project-title">Netmatters Homepage</h1>
                     <span class="view-project-link"><a target="_blank" href="https://netmatters.samuel-wiggins.netmatters-scs.co.uk/">View Project</a></span>
                 </div>
-
+                
                 <div class="project-list__item">
-                    <img class="project-image" src="img/portfolio/portfolio.jpg" alt="">
-                    <h1 class="project-title">Portfolio</h1>
-                    <span class="view-project-link"><a target="_blank" href="index.html">View Project</a></span>
+                    <img class="project-image" src="img/portfolio/jsarray.jpg" alt="JS Array">
+                    <h1 class="project-title">JS Array</h1>
+                    <span class="view-project-link"><a target="_blank" href="https://js-array.samuel-wiggins.netmatters-scs.co.uk/">View Project</a></span>
                 </div>
 
                 <div class="project-list__item">
-                    <img class="project-image" src="img/portfolio/placeholder.jpg" alt="">
-                    <h1 class="project-title">Placeholder</h1>
-                    <span class="view-project-link"><a target="_blank" href="#">View Project</a></span>
+                    <img class="project-image" src="img/portfolio/portfolio.jpg" alt="Portfolio">
+                    <h1 class="project-title">Portfolio</h1>
+                    <span class="view-project-link"><a target="_blank" href="index.html">View Project</a></span>
                 </div>
 
             </div>
