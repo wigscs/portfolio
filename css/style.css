@@ -658,7 +658,7 @@ a:hover {
   flex-basis: 100%;
 }
 @media (min-width: 992px) {
-  .contact__form > div:nth-child(1), .contact__form > div:nth-child(2) {
+  .contact__form > div.first, .contact__form > div.second {
     flex-basis: calc(50% - 5px);
   }
 }

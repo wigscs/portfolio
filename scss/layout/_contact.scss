@@ -25,8 +25,8 @@
     > div {
       flex-basis: 100%;    
       @include mq('large') {
-        &:nth-child(1),
-        &:nth-child(2) {
+        &.first,
+        &.second {
           flex-basis: calc(50% - 5px);
         }
       }
