@@ -1,7 +1,9 @@
 <?php
 
 use App\ContactForm;
+use App\ContactMailer;
 use App\Enquiry;
+use PHPMailer\PHPMailer\Exception;
 
 $page = 'portfolio';
 $title = "Sam Wiggins | Portfolio";
@@ -11,14 +13,23 @@ require 'src/bootstrap.php';
 $form = $dbError = $dbConsoleError = null;
 if (!empty($_POST)) {
     $form = new ContactForm($_POST);
-    if ($form->validate()) { // form is valid so create DB entry
+    if ($form->validate()) { // form is valid so create DB entry and send email
         try {
             $enquiry = new Enquiry($db);
             $enquiry->createEnquiry($form->getInput());
         } catch (PDOException $e) {
             $dbError = 'Error saving message to DB.';
             $dbConsoleError = $e->getMessage();
-        }        
+        }
+
+        // Send email
+        try {
+            $mail = new ContactMailer();
+            $mail->send($form->getInput());
+        } catch (Exception $e) {
+            $dbError = 'Error sending email.';
+            $dbConsoleError = $e->getMessage();
+        }
     }
 }
 
@@ -76,11 +87,11 @@ if (!empty($_POST)) {
                         <p><?php echo $dbError; ?></p>
                     </div>
                 <?php } ?>
-                <div <?php echo $form && $form->getError('first_name') ? ' class="invalid"' : ''; ?>>
+                <div class="first <?php echo $form && $form->getError('first_name') ? ' invalid' : ''; ?>">
                     <input class="contact__form-input" type="text" name="first_name" id="first_name" value="<?php echo $form && $form->hasErrors() ? $form->getInput('first_name') : ''; ?>" placeholder="First Name" required>
                     <span class="error" aria-live="polite">Please enter your first name</span>
                 </div>
-                <div <?php echo $form && $form->getError('last_name') ? ' class="invalid"' : ''; ?>>
+                <div class="second <?php echo $form && $form->getError('last_name') ? ' invalid' : ''; ?>">
                     <input class="contact__form-input" type="text" name="last_name" id="last_name" value="<?php echo $form && $form->hasErrors() ? $form->getInput('last_name') : ''; ?>" placeholder="Last Name" required>
                     <span class="error" aria-live="polite">Please enter your last name</span>
                 </div>
