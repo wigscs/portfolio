@@ -313,11 +313,17 @@ template {
 
 html {
   font-size: 1rem;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.6;
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
 }
 
 body, i {
@@ -326,7 +332,7 @@ body, i {
 }
 
 a {
-  color: #000;
+  color: #4e006d;
   text-decoration: none;
 }
 a:hover {
@@ -610,15 +616,30 @@ a:hover {
 }
 @media (min-width: 768px) {
   .project-list__item {
-    width: calc(50% - 25px);
+    width: calc(33% - 35px);
   }
 }
 .project-list .project-image {
+  max-height: 325px;
   max-width: 100%;
   border: 2px solid #000;
 }
 .project-list .project-title {
   font-size: 1.7rem;
+}
+.project-list .project-links {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.project-list .view-project-link {
+  background-color: #EFFFFF;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.project-list .view-project-link a {
+  color: #6e39ff;
 }
 .project-list .view-project-link a::after {
   content: "";

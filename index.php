@@ -53,19 +53,31 @@ if (!empty($_POST)) {
                 <div class="project-list__item">
                     <img class="project-image" src="img/portfolio/nmhp.jpg" alt="Netmatters Homepage">
                     <h1 class="project-title">Netmatters Homepage</h1>
-                    <span class="view-project-link"><a target="_blank" href="https://netmatters.samuel-wiggins.netmatters-scs.co.uk/">View Project</a></span>
+                    <p>Rebuild of the Netmatters home and contact pages.</p>
+                    <div class="project-links">
+                        <span class="view-project-link"><a target="_blank" href="https://netmatters.samuel-wiggins.netmatters-scs.co.uk/">Demo</a></span>
+                        <span class="view-project-link"><a target="_blank" href="https://github.com/wigscs/netmatters">Code</a></span>
+                    </div>
                 </div>
                 
                 <div class="project-list__item">
                     <img class="project-image" src="img/portfolio/jsarray.jpg" alt="JS Array">
                     <h1 class="project-title">JS Array</h1>
-                    <span class="view-project-link"><a target="_blank" href="https://js-array.samuel-wiggins.netmatters-scs.co.uk/">View Project</a></span>
+                    <p>Javascript using localstorage to create a collection of images associated to an email address</p>
+                    <div class="project-links">
+                        <span class="view-project-link"><a target="_blank" href="https://js-array.samuel-wiggins.netmatters-scs.co.uk/">Demo</a></span>
+                        <span class="view-project-link"><a target="_blank" href="https://github.com/wigscs/jsarray">Code</a></span>
+                    </div>
                 </div>
 
                 <div class="project-list__item">
-                    <img class="project-image" src="img/portfolio/portfolio.jpg" alt="Portfolio">
-                    <h1 class="project-title">Portfolio</h1>
-                    <span class="view-project-link"><a target="_blank" href="index.html">View Project</a></span>
+                    <img class="project-image" src="img/portfolio/laravel.jpg" alt="Laravel Company Manager">
+                    <h1 class="project-title">Company Manager</h1>
+                    <p>Admin panel made with Laravel, login with <br>Email: admin@admin.com <br>Password: password</p>
+                    <div class="project-links">
+                        <span class="view-project-link"><a target="_blank" href="https://laravel.samuel-wiggins.netmatters-scs.co.uk/">Demo</a></span>
+                        <span class="view-project-link"><a target="_blank" href="https://github.com/wigscs/laravelassessment">Code</a></span>
+                    </div>
                 </div>
 
             </div>
