@@ -13,7 +13,7 @@ $title = "Sam Wiggins | About";
   <div class="container">
     <main id="about">
       <h1>About Me</h1>
-      <p>I'm a Back-End Developer with experience using Laravel, PHP and MySQL.</p>
+      <p>Full stack developer with experience creating custom e-commerce, digital content subscriber, CMS and CRM using Laravel, PHP, MySQL, HTML and CSS.</p>
     </main>
 
     <div class="to-top">
