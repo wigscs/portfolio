@@ -9,37 +9,43 @@ menuContainer.addEventListener('click', function(e) {
 
 // Contact form validation using the constraint validation API
 // https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#the_constraint_validation_api
+// Get the contact form
 const contactForm = document.querySelector('.contact__form');
+
+// Check the contact form exists on this page
 if (contactForm) {
+
+  // Disable the browsers automatic validation
   contactForm.noValidate = true;
+
+  // Checks a field is valid and toggles a class of invalid for the parent element of the field
   function validateField(field) {
-    if (field.checkValidity()) {
-      // field is valid - remove class
-      field.parentElement.classList.remove('invalid');
-    } else {
-      // field is invalid - add class
-      field.parentElement.classList.add('invalid');
-    }
+    field.checkValidity() ? field.parentElement.classList.remove('invalid') : field.parentElement.classList.add('invalid');
   }
 
+  // Call validateField on target
   function changeHandler(e) {
     validateField(e.target);
   }
 
+  // Handle form submission
   function submitHandler(e) {
     const form = e.target;
     const fields = Array.from(form.elements);
 
-    // apply/remove invalid class
+    // Call validate for all fields
     fields.forEach(field => {
       validateField(field);
     });
+
+    // Cancel submit if form is invalid
     if (!form.checkValidity()) {
-      // form is invalid - cancel submit
       e.preventDefault();
       e.stopImmediatePropagation();
     }
   }
+
+  // Register event listeners for form submission and field change
   contactForm.addEventListener('submit', submitHandler);
   contactForm.addEventListener('focusout', changeHandler);
 }
