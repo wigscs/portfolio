@@ -70,6 +70,37 @@ if (contactForm) {
 </code>
 </pre>
       </div>
+
+      <div>
+        <h2>Enquiries Model</h2>
+        <p>PHP code for inserting an enquiry into the database using PDO prepared statements to prevent SQL injection.</p>
+        <pre class="theme-vs2015">
+          <code class="language-php">class Enquiries extends Model
+{
+    protected $table = 'enquiries';
+
+    public function createEnquiry(array $input)
+    {
+        $sql = "INSERT INTO $this->table 
+            (name, company, email, phone, message, marketing_preferences) VALUES 
+            (:name, :company, :email, :phone, :message, :marketing_preferences)";
+
+        $stmt = $this->db->prepare($sql);
+        
+        $stmt->bindValue(':name', $input['name'], PDO::PARAM_STR);
+        $stmt->bindValue(':company', $input['company'], PDO::PARAM_STR);
+        $stmt->bindValue(':email', $input['email'], PDO::PARAM_STR);
+        $stmt->bindValue(':phone', $input['phone'], PDO::PARAM_STR);
+        $stmt->bindValue(':message', $input['message'], PDO::PARAM_STR);
+        $stmt->bindValue(':marketing_preferences', $input['marketing_preferences'], PDO::PARAM_BOOL);
+
+        $stmt->execute();
+    }
+}
+
+          </code>
+        </pre>
+      </div>
     </main>
 
     <div class="to-top">
